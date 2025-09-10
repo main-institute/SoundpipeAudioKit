@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -8,10 +8,10 @@ let package = Package(
     platforms: [.macOS(.v12), .iOS(.v13), .tvOS(.v13)],
     products: [.library(name: "SoundpipeAudioKit", targets: ["SoundpipeAudioKit"])],
     dependencies: [
-        .package(url: "https://github.com/AudioKit/KissFFT", from: "1.0.0"),
-        .package(url: "https://github.com/AudioKit/AudioKit", from: "5.6.0"),
-        .package(url: "https://github.com/AudioKit/AudioKitEX", from: "5.5.0"),
-        .package(url: "https://github.com/AudioKit/Tonic", from: "2.0.0"),
+        .package(url: "https://github.com/main-institute/KissFFT", exact: "1.0.0"),
+        .package(url: "https://github.com/main-institute/AudioKit", exact: "5.6.0"),
+        .package(url: "https://github.com/main-institute/AudioKitEX", branch: "main_kex"),
+        .package(url: "https://github.com/main-institute/Tonic", exact: "2.0.0"),
     ],
     targets: [
         .target(name: "Soundpipe",
